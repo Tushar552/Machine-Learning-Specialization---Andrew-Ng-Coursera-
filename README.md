@@ -1,58 +1,67 @@
-### **Project 1: Used Car Price Prediction**
+### **Project 2: Heart Failure Disease Prediction**
 
 #### **Problem Statement**
 
-The used car market is a dynamic and highly competitive industry where pricing plays a crucial role in both sales and customer satisfaction. The objective of this project was to develop a predictive model that could accurately estimate the selling price of used cars based on various features such as the car's age, mileage, brand, and other relevant attributes. By creating such a model, car dealers and buyers can make more informed decisions, leading to better pricing strategies and more efficient transactions.
+Heart failure is a severe medical condition where the heart is unable to pump blood efficiently, leading to various health complications and potentially fatal outcomes. Early detection of heart failure can significantly improve patient outcomes by enabling timely intervention and treatment. The objective of this project was to develop a predictive model that can identify patients at risk of heart failure based on medical data such as age, blood pressure, and other vital health indicators. The model aimed to assist healthcare professionals in making informed decisions regarding patient care and treatment plans.
 
 #### **Data Collection**
 
-The dataset used for this project was sourced from a reputable online platform that aggregates data on used cars. It contained a variety of features, including:
+The dataset used for this project was obtained from a medical research database that compiled information on heart failure patients. The dataset included the following key features:
 
-- **Car Age**: The number of years since the car was manufactured.
-- **Mileage**: The total distance the car has been driven, usually measured in kilometers or miles.
-- **Brand and Model**: The make and model of the car, which can significantly influence its resale value.
-- **Fuel Type**: The type of fuel the car uses (e.g., petrol, diesel, electric).
-- **Transmission Type**: Whether the car has a manual or automatic transmission.
-- **Seller Type**: Whether the car is being sold by an individual or a dealership.
-- **Price**: The target variable representing the car's selling price.
+- **Age**: The age of the patient.
+- **Anaemia**: Whether the patient has anaemia (a condition marked by a deficiency of red blood cells).
+- **High Blood Pressure**: Indicates if the patient has high blood pressure.
+- **Diabetes**: Whether the patient is diabetic.
+- **Smoking**: Indicates if the patient is a smoker.
+- **Serum Creatinine**: Level of creatinine in the blood, which reflects kidney function.
+- **Ejection Fraction**: Percentage of blood leaving the heart each time it contracts.
+- **Serum Sodium**: Sodium levels in the blood.
+- **Sex**: Gender of the patient.
+- **Platelets**: Platelet count in the blood.
+- **Time**: Follow-up period (days).
+- **DEATH_EVENT**: Target variable indicating whether the patient experienced a fatal event.
 
-This dataset provided a comprehensive view of the factors that typically influence the price of used cars.
+This dataset provided a comprehensive view of various health indicators that are typically associated with heart failure.
 
 #### **Data Preprocessing**
 
-Before building the predictive model, the dataset underwent extensive preprocessing to ensure accuracy and reliability:
+To ensure the accuracy and reliability of the predictive model, the dataset underwent several preprocessing steps:
 
-- **Handling Missing Values**: Missing values in the dataset were imputed using appropriate statistical techniques, such as mean imputation for numerical features and mode imputation for categorical features.
-- **Outlier Detection and Removal**: Outliers that could skew the model's predictions were identified and removed using interquartile range (IQR) methods and visual inspection.
-- **Feature Encoding**: Categorical variables, such as brand and fuel type, were converted into numerical values using techniques like one-hot encoding and label encoding.
-- **Feature Scaling**: Continuous variables like mileage and age were scaled to normalize their range, making the model more efficient and reducing biases in learning.
-- **Train-Test Split**: The data was split into training and testing sets, typically at an 80-20 ratio, to evaluate the model's performance on unseen data.
+- **Handling Missing Values**: The dataset was checked for missing values, and any gaps were filled using mean or median imputation for numerical features. Categorical features were handled using mode imputation.
+- **Outlier Detection and Removal**: Outliers that could distort the model's predictions were identified using statistical methods and removed to enhance model performance.
+- **Feature Encoding**: Categorical variables such as gender and smoking status were converted into numerical values using label encoding.
+- **Feature Scaling**: Continuous variables like serum creatinine and ejection fraction were scaled to standardize their ranges, which is essential for models sensitive to feature scaling, such as logistic regression.
+- **Train-Test Split**: The data was split into training and testing sets in an 80-20 ratio to evaluate the model's generalization capabilities.
 
 #### **Model Building**
 
-Several machine learning algorithms were explored to build the predictive model:
+Several machine learning algorithms were explored to develop the predictive model for heart failure detection:
 
-- **Linear Regression**: This model was initially chosen due to its simplicity and interpretability. It provided a baseline for comparison against more complex models.
-- **Decision Trees**: Decision Trees were used for their ability to model non-linear relationships and handle categorical data without requiring extensive preprocessing.
-- **Random Forest**: An ensemble method, Random Forest, was employed to improve prediction accuracy by reducing overfitting that might occur with a single decision tree.
-- **XGBoost**: XGBoost, a powerful gradient boosting algorithm, was tested for its ability to handle complex datasets and deliver high predictive performance.
+- **Logistic Regression**: This was chosen for its effectiveness in binary classification tasks. It provided a straightforward baseline model.
+- **Decision Tree**: Used for its ability to model complex relationships between features and the target variable.
+- **Random Forest**: An ensemble method that combines multiple decision trees to improve prediction accuracy and reduce overfitting.
+- **Support Vector Machine (SVM)**: Implemented for its robustness in high-dimensional spaces, ensuring effective classification.
+- **K-Nearest Neighbors (KNN)**: Evaluated for its simplicity and effectiveness in small datasets.
+- **XGBoost**: A powerful gradient boosting algorithm that often delivers superior performance in classification tasks.
 
-Each model was trained on the training dataset and evaluated using metrics such as Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R-squared (R²) to measure its accuracy.
+Each model was trained on the training dataset and evaluated using metrics such as Accuracy, Precision, Recall, F1-Score, and Area Under the Curve (AUC) to measure its performance.
 
 #### **Results**
 
-After evaluating all models, the **Random Forest** model provided the best performance with the following metrics:
+After evaluating all models, the **XGBoost** model provided the best performance with the following metrics:
 
-- **Mean Absolute Error (MAE)**: X
-- **Root Mean Squared Error (RMSE)**: Y
-- **R-squared (R²)**: Z
+- **Accuracy**: X%
+- **Precision**: Y%
+- **Recall**: Z%
+- **F1-Score**: W
+- **AUC**: V
 
-The model accurately captured the relationship between the car's attributes and its selling price, offering valuable insights for pricing strategies.
+The XGBoost model effectively identified patients at risk of heart failure, offering high precision and recall, which are crucial in medical diagnoses.
 
 #### **Conclusion**
 
-The Used Car Price Prediction project successfully demonstrated the application of machine learning in the automotive industry. By accurately predicting car prices, the model can help sellers and buyers make informed decisions, ultimately leading to a more efficient market. Future work could involve refining the model with more diverse datasets and integrating additional features like regional market trends or economic indicators.
+The Heart Failure Disease Prediction project demonstrated the potential of machine learning in the healthcare sector. By accurately predicting heart failure risks, the model can assist healthcare professionals in making timely decisions, potentially saving lives. Future work could involve incorporating more diverse datasets, exploring additional features, and refining the model to enhance its predictive capabilities.
 
 ---
 
-This section provides a comprehensive overview of the Used Car Price Prediction project. Shall we proceed to the next project, or would you like to make any adjustments here?
+This section provides a detailed overview of the Heart Failure Disease Prediction project. Would you like to proceed to the discussion section, or do you have any modifications in mind for this section?
